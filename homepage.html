@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prep2Plate - Welcome</title>
+    <link rel="icon" href="/frontend/icon.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@800&display=swap" rel="stylesheet"> <!-- Add Google Font -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4F4A6E',
+                        secondary: '#E5E7EB',
+                    },
+                    fontFamily: {
+                        'work-sans': ['"Work Sans"', 'sans-serif'], // Add Work Sans font family
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        body {
+            background: url('/frontend/backgorunf.png') no-repeat center center fixed; /* Replace with your background image path */
+            background-size: cover;
+            font-family: 'Work Sans', sans-serif;
+            overflow: hidden;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 1rem;
+            backdrop-filter: blur(10px); /* Add blur effect */
+            background: rgba(255, 255, 255, 0.8); /* Add semi-transparent background */
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        .title {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .title img {
+            height: 3rem; /* Adjust the height to match the text size */
+            margin-right: 0.5rem;
+        }
+        .subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        .button {
+            padding: 0.75rem 1.5rem;
+            margin: 0.5rem;
+            background: #000;
+            color: white;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .button:hover {
+            background: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">
+            <img src="/frontend/icon.png" alt="Icon"> <!-- Replace with your icon path -->
+            Prep2Plate
+        </h1>
+        <p class="subtitle">Your personalized meal planning assistant</p>
+        <div>
+            <button class="button" onclick="window.location.href='/index.html#signup'">Sign Up</button>
+            <button class="button" onclick="window.location.href='/index.html#signin'">Sign In</button>
+        </div>
+    </div>
+</body>
+</html>

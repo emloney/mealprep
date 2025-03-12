@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Prep2Plate</title>
+    <link rel="icon" href="/frontend/icon.png" type="image/x-icon"> <!-- Add the favicon link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@800&display=swap" rel="stylesheet"> <!-- Add Google Font -->
+    <style>
+        .background-image {
+            background-image: url("foodiii.png"); /* Add the background image */
+            background-size: cover;
+            background-position: center;
+            filter: blur(8px); /* Apply blur effect */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4F46E5',
+                        secondary: '#E5E7EB',
+                    },
+                    fontFamily: {
+                        'work-sans': ['"Work Sans"', 'sans-serif'], // Add Work Sans font family
+                    },
+                },
+            },
+        };
+    </script>
+</head>
+<body class="min-h-screen bg-gradient-to-b from-white to-gray-50 flex flex-col items-center justify-center antialiased text-gray-900">
+    
+    <!-- Background Image -->
+    <div class="background-image"></div> <!-- Add the background image container -->
+
+    <!-- Navigation Bar -->
+    <nav class="w-full bg-white shadow-md fixed top-0 left-0 right-0 py-4 px-8 flex justify-between items-center">
+        <div class="flex items-center">
+            <img src="icon.png" alt="Icon" class="h-8 w-8 mr-2"> <!-- Add the icon here -->
+            <h2 class="text-2xl font-bold text-gray-900 font-work-sans">Prep2Plate</h2> <!-- Apply Work Sans font -->
+        </div>
+        <div class="flex items-center space-x-4">
+            <a href="about.html" class="text-gray-700 font-medium hover:text-gray-900 transition">About Us</a>
+            <a href="mealplanner.html" class="text-gray-700 font-medium hover:text-gray-900 transition">Meal Planner</a>
+            <button id="logout" class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition">
+                Logout
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="w-full mx-auto mt-24 px-4"> <!-- Adjust margin to prevent overlap with navbar -->
+        <!-- Header -->
+        <div class="text-center mb-10">
+            <h1 class="text-4xl font-bold text-gray-900 mb-4 font-work-sans">About Us</h1> <!-- Apply Work Sans font -->
+            <p class="text-gray-600">Learn more about Prep2Plate</p>
+        </div>
+
+        <!-- About Us Content -->
+        <div class="bg-white rounded-3xl shadow-xl p-12 mb-10 max-w-4xl mx-auto relative z-10"> <!-- Added relative z-10 -->
+            <p class="text-gray-700 text-lg leading-relaxed">
+                Prep2Plate is dedicated to helping you find the best meals based on the ingredients you have at home. Our mission is to make meal planning easy and accessible for everyone. Whether you're looking for quick and easy recipes, healthy options, or vegan meals, we've got you covered.
+            </p>
+            <p class="text-gray-700 text-lg leading-relaxed mt-6">
+                Our team of nutrition specialists and culinary experts work tirelessly to bring you a wide variety of recipes that are not only delicious but also nutritious. We believe that everyone deserves to enjoy good food, and we're here to help you make that happen.
+            </p>
+            <p class="text-gray-700 text-lg leading-relaxed mt-6">
+                Thank you for choosing Prep2Plate. We hope you enjoy using our meal planner and find it helpful in your daily life.
+            </p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-8 mt-10 w-full">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="flex flex-col items-center">
+                <div>
+                    <h3 class="text-lg font-bold">Prep2Plate</h3>
+                    <p class="text-sm">© 2025 Prep2Plate. All rights reserved.</p>
+                </div>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="text-sm font-semibold">About</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="about.html" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-semibold">Recipes</h4>
+                    <ul class="mt-4 space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Quick & Easy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Healthy</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Vegan</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('logout').addEventListener('click', () => {
+            alert("You have been logged out.");
+            localStorage.removeItem('username'); // Clear user information from local storage
+            window.location.href = "/index.html"; // Redirect to login page
+        });
+    </script>
+
+</body>
+</html>
